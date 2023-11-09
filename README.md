@@ -11,8 +11,5 @@ Motion Estimator
 • Permits high level of compression
 • Example (4x4 block)
 
-Reference Block in
-Frame 1
-“Draw block” with
-motion vector (1,2)
-in frame 2
+![blocks](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/882a490a-35b6-40e7-82d9-f516b09f6c4c)
+
