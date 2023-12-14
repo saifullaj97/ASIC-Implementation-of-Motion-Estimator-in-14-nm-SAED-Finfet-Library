@@ -48,21 +48,28 @@ Describe for 16x16 reference block:
 
 A behavioral structure is planned before writing Verilog code. Operations occur on the rising clock edge. The design utilizes external memories for R, S1, and S2 (Reference Frame and Search Frames). The motion vectors for X and Y axes range from -8 to 7 pixels in Two’s Complement form.
 
+![hardware](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/2728fa54-d33f-4f0a-8efb-e1be5d2e53c9)
+
+
 ### Verification
 
 Several testbenches verify the Motion Estimator modules in a waveform simulator. Submodules are simulated individually, aiming for bug detection. Figures display Memory Elements, Processing Element (PE) Waveforms, PETotal (16 Processing Elements) Waveform, Comparator Module Waveform, and various test cases for the Top Module.
 
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/623bbedf-4489-4d13-9fa5-c5aaf9f21d1a)
 **Figure 2 - Memory Element Display**  
-![Memory Element Display](./images/memory_display.png)
 
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/0e119b5b-ad7e-417b-878e-d2ba077f7dfb)
 **Figure 3 - PE Waveform**  
-![PE Waveform](./images/pe_waveform.png)
 
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/35a88562-5381-4763-923d-83920b1df520)
 **Figure 5 - PETotal Waveform**  
-![PETotal Waveform](./images/petotal_waveform.png)
 
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/db853fff-9048-440f-8224-b86cc289169b)
 **Figure 6 - Comparator Waveform**  
-![Comparator Waveform](./images/comparator_waveform.png)
+
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/c9d3e94a-b3b7-41fe-83f0-f48f076b4cbe)
+**Figure 7 - Comparator Stimulus** 
+
 
 # Logic Synthesis
 
@@ -78,20 +85,21 @@ Design Compiler (DC) from Synopsys Inc. is a synthesis tool that translates a Re
 - Technology mapping to available standard cells in the technology library (target library)
 
 ### Flowchart of Synthesis Process
-![Flowchart of Synthesis Process](./images/flowchart_synthesis.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/8abf775c-809c-493d-9f9c-5fd793c603db)
+
 
 ### Inputs and Outputs of Logic Synthesis
 Design Compiler reads technology libraries and DesignWare libraries to implement synthesis. It translates RTL descriptions to components extracted from these libraries. 
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/aa47de16-9e59-4d2f-8eba-3a758daaab8f)
 
-![Inputs and Outputs of Logic Synthesis](./images/inputs_outputs_synthesis.png)
 
 ## Synthesis Constraints and Schematic
 
 ### Synthesis Constraints
-![Synthesis Constraints](./images/synthesis_constraints.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/1d472e26-84b2-4ce9-a057-b72a315fbfd5)
 
 ### Synthesis Schematic
-![Synthesis Schematic](./images/synthesis_schematic.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/b9a96eae-5765-4dd2-9083-e647df2d20d4)
 
 After synthesis, the tool generates key files:
 
@@ -99,34 +107,117 @@ After synthesis, the tool generates key files:
 - .sdc timing constraints file
 
 ### Post Synthesis Gate Level Netlist
-![Post Synthesis Gate Level Netlist](./images/post_synthesis_gate_level_netlist.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/ec6a4a42-d0fa-4bac-8c5b-bae12eb1f8b4)
+
 
 ### Post Synthesis SDC Constraints
-![Post Synthesis SDC Constraints](./images/post_synthesis_sdc_constraints.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/c110b31b-fb7c-4f84-a1eb-daaabdaa018a)
+
 
 ## Synthesis Reports
 
 The synthesis tool generates text reports (`.rpt` files) providing crucial design insights:
 
 ### Post Synthesis Area Report
-![Post Synthesis Area Report](./images/post_synthesis_area_report.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/8b674580-8f4c-4311-8910-669aeacab3bf)
+
 
 ### Post Synthesis Power Report
-![Post Synthesis Power Report](./images/post_synthesis_power_report.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/df48cbc2-729c-41bb-ad02-66dc9ad3735b)
+
 
 ### Post Synthesis QOR (Quality of Results) Report
-![Post Synthesis QOR Report](./images/post_synthesis_qor_report.png)
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/a05ba82f-0ebe-4a97-930c-32b2d9fd4cee)
+
 
 ### Timing Reports
 - Post Synthesis Primetime Setup Report  
-  ![Post Synthesis Primetime Setup Report](./images/post_synthesis_setup_report.png)
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/98d2f833-865b-4d02-803a-baade1218599)
+
 
 - Post Synthesis Primetime Hold Report  
-  ![Post Synthesis Primetime Hold Report](./images/post_synthesis_hold_report.png)
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/54c8ee5a-5fe1-457f-a6ab-86ae7b2fbbb9)
+
+# Physical Design
+
+The physical design involves transforming a circuit description into the physical layout, focusing on minimal area and wire length.
+
+## Steps in Physical Design
+
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/70957790-d851-478b-b221-bceed9edc1d8)
+**Figure 24 – Physical Design Flow**
+
+1. **Partitioning:** Breaks a circuit into smaller sub-circuits or modules for individual analysis.
+2. **Floorplanning:** Determines the arrangement of modules, external ports, IP, or macro-blocks.
+3. **Power and Ground Routing:** Distributes power and ground nets throughout the chip.
+4. **Placement:** Determines spatial locations of cells within each block.
+5. **Clock Network Synthesis:** Handles clock signal buffering, gating, and routing.
+6. **Global Routing:** Allocates routing resources for connections.
+7. **Detailed Routing:** Assigns routes to specific metal layers within global routing resources.
+8. **Timing Closure:** Optimizes circuit performance through specialized placement or routing techniques.
+
+### Inputs Required for Physical Design
+
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/a1bcfb90-02c4-4b95-acee-e7a167ced4c5)
+**Figure 25 – Physical Design Inputs**
+
+1. **Gate-Level Netlist:** Result of synthesizing RTL code with standard cell libraries.
+2. **Constraint File (SDC):** Includes system interface, design rule constraints, timing specifics, and exceptions.
+3. **Standard Cell Libraries:** Logical and Physical libraries providing cell timing, area, pin information, and power characteristics.
+4. **Technology File:** Contains metal layer information, vias, design rules, and resistance data.
+5. **RC Coefficient File:** Used for RC estimation and extraction.
+6. **MMMC View File:** Generates different analysis views based on delay corners and constraint modes.
+7. **Block-Level PnR Implementation:** Specifies block size, pin definition, power distribution, and intent.
+8. **Switching Activity Files:** Used for dynamic IR analysis based on chip-level switching activities.
+
+### Constraints for Physical Design
+- Chip aspect ratio: square-shaped (aspect ratio 1)
+- Utilization: 70%
+
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/0ef5b358-7d44-4ab8-a539-1d32ea328447)
+**Figure 25 – Physical Design Constraints**
 
 
-### Conclusion
 
-The design validated through test cases displays accurate motion vectors under different scenarios, verifying the Motion Estimator's functionality.
+
+## Post-Physical Design Outputs
+
+### Layout Views
+- Post Routing Layout View  
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/3f4d30b9-46af-47a5-8f92-2877e1ac805f)
+
+  
+- Layout View with Routes Turned Off  
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/7b0047f8-e106-4338-8e90-1a9c7f6d3759)
+
+  
+- Layout View of Signal Interconnections  
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/a6d3d72e-82a6-4d4b-9eac-d2a55e52a77b)
+
+### Post-Layout Reports
+- Post Layout Area Report  
+ ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/68137b54-69ff-4939-b822-cb036b240a34)
+
+- Post Layout Power Report  
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/cedb11f4-ea98-4cd1-96b5-ee19ae98c93d)
+
+### Post Layout SPEF File
+![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/af1f5b2e-c1a7-4035-bc6c-58a62e3b24ab)
+
+## Sign-Off and Verification
+
+### Timing Analysis
+- Post Layout Primetime Setup Report  
+ ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/cef2aed8-77c9-45a2-8a9e-f47e388cc4fc)
+
+- Post Layout Primetime Hold Report  
+  ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/1236550b-516c-43a5-88d4-bf5c82996013)
+
+### Design Rule Check (DRC)
+- DRC Check  
+  ![Uploading image.png…]()
+
+## Discussion and Conclusion
+
 
 
