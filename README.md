@@ -33,8 +33,11 @@ Motion Estimator
 • Permits high level of compression
 
 Example (4x4 block)
+<p align="center">
+  ![blocks](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/882a490a-35b6-40e7-82d9-f516b09f6c4c)
+</p>
 
-![blocks](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/882a490a-35b6-40e7-82d9-f516b09f6c4c)
+
 
 Search Algorithm
 Describe for 16x16 reference block:
@@ -56,7 +59,7 @@ A behavioral structure is planned before writing Verilog code. Operations occur 
 Several testbenches verify the Motion Estimator modules in a waveform simulator. Submodules are simulated individually, aiming for bug detection. Figures display Memory Elements, Processing Element (PE) Waveforms, PETotal (16 Processing Elements) Waveform, Comparator Module Waveform, and various test cases for the Top Module.
 
 ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/623bbedf-4489-4d13-9fa5-c5aaf9f21d1a)
-**Figure 2 - Memory Element Display**  
+                                    **Figure 2 - Memory Element Display**  
 
 ![image](https://github.com/saifullaj97/ASIC-Implementation-of-Motion-Estimator-in-14-nm-SAED-Finfet-Library/assets/61980110/0e119b5b-ad7e-417b-878e-d2ba077f7dfb)
 **Figure 3 - PE Waveform**  
